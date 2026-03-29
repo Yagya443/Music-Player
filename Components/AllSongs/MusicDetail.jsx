@@ -39,6 +39,8 @@ const MusicDetail = () => {
             dispatch(setCurrentSong(queue[prevIndex + 1]));
             dispatch(setCurrentIndex(prevIndex + 1));
         }
+        console.log("prev");
+
     }
 
     function handleNext() {
@@ -47,6 +49,9 @@ const MusicDetail = () => {
         const nextIndex = currentIndex + 1;
         dispatch(setCurrentSong(queue[nextIndex]));
         dispatch(setCurrentIndex(nextIndex));
+
+        console.log("next");
+        
     }
 
     useEffect(() => {
@@ -160,6 +165,7 @@ const MusicDetail = () => {
                             >
                                 {!isPlaying ? (
                                     <FaPlay size={45} />
+                                    
                                 ) : (
                                     <FaPause size={45} />
                                 )}
