@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+  *{
+    text-wrap: nowrap;
+  }
+
+    .wrapper {
+        flex-direction: column;
+    }
+    .main {
+        width: 90%;
+    }
+    .musicRadioWrapper {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .musicRadioInitialText {
+        margin-top: 100px;
+        font-size: 50px;
+    }
+    .allSongWrapper{
+      width: 100%;
+    }
+    .playlistWrapper{
+      width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .main {
+        width: 70%;
+    }
+    .musicRadioWrapper {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .musicRadioInitialText {
+        margin-top: 100px;
+        font-size: 50px;
+    }
+    .allSongWrapper{
+      width: 100%;
+    }
+    .playlistWrapper{
+      width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+}
