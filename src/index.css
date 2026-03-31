@@ -4,11 +4,15 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+.music-player-play-btn,
+.music-player-btn {
+    font-size: 40px;
+}
 
-  *{
-    text-wrap: nowrap;
-  }
+@media (max-width: 768px) {
+    * {
+        text-wrap: nowrap;
+    }
 
     .wrapper {
         flex-direction: column;
@@ -16,21 +20,81 @@
     .main {
         width: 90%;
     }
+
+    /* MusicDetails */
     .musicRadioWrapper {
         width: 100%;
-        min-height: 300px;
+        min-height: 500px;
+    }
+    
+    .musicRadioInitialText {
+        margin-top: 180px;
+        font-size: 70px;
+    }
+    .music-player-title {
+        font-size: 100px;
+        margin-top: 20px;
+    }
+    .music-player-artist {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .music-player-progress {
+        font-size: 25px;
+        margin: 30px 0 30px 0;
     }
 
-    .musicRadioInitialText {
-        margin-top: 100px;
+    .music-player-volume-container {
+        margin-top: 40px;
+    }
+
+    .music-player-btn {
+        font-size: 55px;
+        margin-top: 10px;
+    }
+    .music-player-play-btn {
+        font-size: 75px;
+        margin-top: 10px;
+    }
+
+    /* NavBar */
+
+    .navBar-title{
+        font-size: 22px;
+    }
+
+
+/* ALLSONG  */
+    .allSongWrapper {
+        width: 100%;
+        max-height: 600px;
+    }
+
+    .allSongs-title{
         font-size: 50px;
     }
-    .allSongWrapper{
-      width: 100%;
+    .songDetail-wrapper{
+        height:100px ;
     }
-    .playlistWrapper{
-      width: 100%;
+    .songDetail-wrapper-title,
+    .songDetail-wrapper-duration{
+        font-size: 22px;
     }
+    .songDetail-wrapper-playPause{
+        font-size: 21px;
+        color: #04f589d0;
+    }
+
+/* playlist */
+    .playlistWrapper {
+        width: 100%;
+        max-height: 700px;
+    }
+    .createPlaylist-list{
+        max-height: 200px;
+    }
+
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -49,11 +113,11 @@
         margin-top: 100px;
         font-size: 50px;
     }
-    .allSongWrapper{
-      width: 100%;
+    .allSongWrapper {
+        width: 100%;
     }
-    .playlistWrapper{
-      width: 100%;
+    .playlistWrapper {
+        width: 100%;
     }
 }
 

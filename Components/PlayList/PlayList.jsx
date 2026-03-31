@@ -63,7 +63,7 @@ const PlayListlist = () => {
         <>
             <div className="playlistWrapper border-2 rounded-2xl w-108 bg-[#2B2B2B] px-4 py-4 max-h-148">
                 <h1 className="text-3xl text-center font-semibold">PlayList</h1>
-                <div className="w-90% bg-[#363636] py-3 px-3 mt-2 rounded-lg">
+                <div className="createPlaylist-wrapper w-90% bg-[#363636] py-3 px-3 mt-2 rounded-lg">
                     <h2 className=" font-semibold text-2xl">
                         Create A PlayList
                     </h2>
@@ -84,7 +84,7 @@ const PlayListlist = () => {
                             Create
                         </button>
                     </div>
-                    <div className="rounded-lg mt-4 max-h-34 border overflow-y-auto no-scrollbar ">
+                    <div className="createPlaylist-list rounded-lg mt-4 max-h-34 border overflow-y-auto no-scrollbar ">
                         {songs.map((song, idx) => (
                             <div
                                 key={idx}

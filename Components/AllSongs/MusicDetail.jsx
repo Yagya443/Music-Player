@@ -117,14 +117,14 @@ const MusicDetail = () => {
                     </p>
                 ) : (
                     <div>
-                        <h1 className="text-center text-5xl font-bold mt-5">
+                        <h1 className="music-player-title text-center text-5xl font-bold mt-5">
                             {currentSong.title}
                         </h1>
-                        <h4 className="text-center text-lg mt-1 ">
+                        <h4 className="music-player-artist text-center text-lg mt-1 ">
                             {currentSong.artist}
                         </h4>
-                        <div className="flex items-center justify-center mt-4 gap-2 ">
-                            <p className="font-semibold">
+                        <div className="music-player-progress flex items-center justify-center mt-4 gap-2 ">
+                            <p className="music-player-time font-semibold">
                                 {durationInMinutes(process)}
                             </p>
                             <audio
@@ -134,7 +134,7 @@ const MusicDetail = () => {
                             ></audio>
                             <input
                                 type="range"
-                                className="w-[75%] accent-green-400 "
+                                className="music-player-progress-bar w-[75%] accent-green-400 "
                                 value={process}
                                 min={0}
                                 max={
@@ -146,38 +146,43 @@ const MusicDetail = () => {
                                     setProcess(e.target.value);
                                 }}
                             />
-                            <p className="font-semibold">
+                            <p className="music-player-duration font-semibold">
                                 {currentSong.duration}
                             </p>
                         </div>
 
-                        <div className="flex gap-7 items-center justify-center mt-6  ">
-                            <FaBackwardFast
-                                size={40}
-                                className="cursor-pointer"
-                                onClick={handlePrev}
-                            />
+                            <div className="music-player-controls flex gap-7 items-center justify-center mt-6  ">
+                                <FaBackwardFast
+                                    // size={40}
+                                    className="music-player-btn cursor-pointer"
+                                    onClick={handlePrev}
+                                />
+                                <button
+                                    className="music-player-play-btn cursor-pointer"
+                                    onClick={() => {
+                                        dispatch(togglePlay());
+                                    }}
+                                >
+                                    {!isPlaying ? (
+                                        <FaPlay 
+                                        // size={45}
+                                         />
+                                        
+                                    ) : (
+                                        <FaPause
+                                        //  size={45} 
+                                         />
+                                    )}
+                                </button>
+                                <FaForwardFast
+                                    // size={40}
+                                    className="music-player-btn cursor-pointer"
+                                    onClick={handleNext}
+                                />
+                            </div>
+                        <div className="music-player-volume-container flex items-center gap-2 ml-3 mt-6 mb-4">
                             <button
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    dispatch(togglePlay());
-                                }}
-                            >
-                                {!isPlaying ? (
-                                    <FaPlay size={45} />
-                                    
-                                ) : (
-                                    <FaPause size={45} />
-                                )}
-                            </button>
-                            <FaForwardFast
-                                size={40}
-                                className="cursor-pointer"
-                                onClick={handleNext}
-                            />
-                        </div>
-                        <div className="flex items-center gap-2 ml-3 mt-6 mb-4">
-                            <button
+                            className="music-player-volume-btn"
                                 onClick={() => {
                                     dispatch(volumeStatus());
                                     if (mute === false) {
@@ -199,7 +204,7 @@ const MusicDetail = () => {
 
                             <input
                                 type="range"
-                                className="w-[85%] accent-green-400 "
+                                className="music-player-volume-bar w-[85%] accent-green-400 "
                                 min={0}
                                 max={100}
                                 value={volume}

@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <div className="flex justify-between items-center border-2 py-2 px-4 rounded-2xl text-white bg-[#2B2B2B]">
             <NavLink to="/" reloadDocument>
-                <div className="text-3xl flex items-center gap-2 text-green-500 font-semibold">
+                <div className="navBar-title text-3xl flex items-center gap-2 text-green-500 font-semibold">
                     <FaMusic /> Music Player
                 </div>
             </NavLink>

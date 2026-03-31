@@ -22,26 +22,26 @@ const AllSongList = () => {
     return (
         <>
             <div className="allSongWrapper border-2 rounded-2xl w-108 max-h-112 overflow-y-auto no-scrollbar bg-[#2B2B2B] px-4 font-semibold">
-                <h1 className="text-3xl font-semibold text-center mt-4">
+                <h1 className="allSongs-title text-3xl font-semibold text-center mt-4">
                     All Songs({songDetail.length})
                 </h1>
 
                 {songDetail.map((song, idx) => (
                     <div
-                        className={`px-4 py-1 border my-4 rounded cursor-pointer ${currentSong && currentSong.id === idx + 1 && "bg-[#8bffcb90] border-2 border-[#04f589d0]"} `}
+                        className={`songDetail-wrapper px-4 py-1 border my-4 rounded cursor-pointer ${currentSong && currentSong.id === idx + 1 && "bg-[#8bffcb90] border-2 border-[#04f589d0]"} `}
                         key={idx}
                         onClick={() => handleSongClick(song)}
                     >
-                        <h1>{song.title}</h1>
+                        <h1 className="songDetail-wrapper-title">{song.title}</h1>
                         <div className="flex justify-between items-center">
-                            <h2>{song.artist}</h2>
+                            <h2 className="songDetail-wrapper-playPause">{song.artist}</h2>
                             {currentSong && currentSong.id === idx + 1 && isPlaying ? (
                                 <FaPause />
                             ) : (
                                 <FaMusic />
                             )}
                         </div>
-                        <p>{song.duration}</p>
+                        <p className="songDetail-wrapper-duration">{song.duration}</p>
                     </div>
                 ))}
             </div>

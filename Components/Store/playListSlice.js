@@ -11,7 +11,7 @@ const playListSlice = createSlice({
                 title: "Motto",
                 artist: "NF Real Music",
                 duration: "3:54",
-                url: "/songs/NF_-_Motto_CeeNaija.com_.mp`"
+                url: `/songs/NF_-_MOTTO_CeeNaija.com_.mp3`
             },
             {
                 id: 2,
@@ -19,6 +19,7 @@ const playListSlice = createSlice({
                 artist: "NF Real Music",
                 duration: "4:31",
                 url: `/songs/NF_-_Fear_CeeNaija.com_.mp3`,
+
             },
             {
                 id: 3,
@@ -26,6 +27,7 @@ const playListSlice = createSlice({
                 artist: "NF Real Music",
                 duration: "5:36",
                 url: `/songs/NF_-_Change_CeeNaija.com_.mp3`,
+                // C:\Users\Yagya vyas\OneDrive\Desktop\Projects\react\Music-Player\public\songs\
             },
             {
                 id: 4,
