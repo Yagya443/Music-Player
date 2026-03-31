@@ -10,11 +10,11 @@ const NavBar = () => {
                 </div>
             </NavLink>
 
-            <div className="flex gap-2 text-lg ">
+            <div className= "navbar-right flex gap-2 text-lg ">
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        `hover:bg-[#4d4444] px-4 rounded py-1 ${isActive ? "font-bold" : "font-semibold"}`
+                        `hover:bg-[#4d4444] navBar-title-allSongs px-4 rounded py-1 ${isActive ? "font-bold" : "font-semibold"}`
                     }
                 >
                     All Songs
@@ -22,7 +22,7 @@ const NavBar = () => {
                 <NavLink
                     to="/playlist"
                     className={({ isActive }) =>
-                        `hover:bg-[#4d4444] px-4 rounded py-1 ${isActive ? "font-bold" : "font-semibold"}`
+                        `hover:bg-[#4d4444] navBar-title-playlist px-4 rounded py-1 ${isActive ? "font-bold" : "font-semibold"}`
                     }
                 >
                     Playlist

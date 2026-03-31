@@ -9,7 +9,7 @@
     font-size: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 400px) {
     * {
         text-wrap: nowrap;
     }
@@ -26,7 +26,7 @@
         width: 100%;
         min-height: 500px;
     }
-    
+
     .musicRadioInitialText {
         margin-top: 180px;
         font-size: 70px;
@@ -59,42 +59,39 @@
 
     /* NavBar */
 
-    .navBar-title{
+    .navBar-title {
         font-size: 22px;
     }
 
-
-/* ALLSONG  */
+    /* ALLSONG  */
     .allSongWrapper {
         width: 100%;
         max-height: 600px;
     }
 
-    .allSongs-title{
+    .allSongs-title {
         font-size: 50px;
     }
-    .songDetail-wrapper{
-        height:100px ;
+    .songDetail-wrapper {
+        height: 100px;
     }
     .songDetail-wrapper-title,
-    .songDetail-wrapper-duration{
+    .songDetail-wrapper-duration {
         font-size: 22px;
     }
-    .songDetail-wrapper-playPause{
+    .songDetail-wrapper-playPause {
         font-size: 21px;
         color: #04f589d0;
     }
 
-/* playlist */
+    /* playlist */
     .playlistWrapper {
         width: 100%;
         max-height: 700px;
     }
-    .createPlaylist-list{
+    .createPlaylist-list {
         max-height: 200px;
     }
-
-
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -121,5 +118,77 @@
     }
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 399px) {
+
+    *{
+        text-wrap: nowrap;
+        
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    /* MusicDetails */
+    .musicRadioWrapper {
+        width: 100%;
+        min-height: 400px;
+        padding: 2px;
+    }
+
+    .musicRadioInitialText {
+        margin-top: 100px;
+        font-size: 70px;
+    }
+    .music-player-title {
+        font-size: 80px;
+        margin-top: 40px;
+    }
+    .music-player-artist {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .music-player-progress {
+        font-size: 20px;
+        margin: 20px 0 20px 0;
+    }
+
+    .music-player-volume-container {
+        margin-top: 30px;
+    }
+     /* NavBar */
+
+    .navBar-title {
+        font-size: 18px;
+    }
+
+    /* .navbar-right{
+        
+    } */
+
+    .navBar-title-allSongs,
+    .navBar-title-playlist{
+        font-size: 16px;
+        padding: 2px;
+    }
+
+
+    /* ALLSONG  */
+    .allSongWrapper {
+        width: 100%;
+        max-height: 600px;
+    }
+
+    /* playlist */
+    .playlistWrapper {
+        width: 100%;
+        max-height: 700px;
+    }
+    .createPlaylist-list {
+        max-height: 200px;
+    }
 }
