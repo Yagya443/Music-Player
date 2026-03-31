@@ -8,7 +8,7 @@ import { store } from "../Components/Store/Store.js";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <BrowserRouter basename="/Music-Player/">
+        <BrowserRouter >
             <Provider store={store}>
                 <App />
             </Provider>
