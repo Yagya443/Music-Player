@@ -9,6 +9,10 @@
     font-size: 40px;
 }
 
+.songDetail-wrapper-playPause {
+    color: #04f589d0;
+}
+
 @media (max-width: 768px) and (min-width: 400px) {
     * {
         text-wrap: nowrap;
@@ -30,6 +34,7 @@
     .musicRadioInitialText {
         margin-top: 180px;
         font-size: 70px;
+        text-wrap: wrap;
     }
     .music-player-title {
         font-size: 100px;
@@ -123,10 +128,8 @@ text-wrap: nowrap;
 }
 
 @media (max-width: 399px) {
-
-    *{
+    * {
         text-wrap: nowrap;
-        
     }
 
     .wrapper {
@@ -165,7 +168,7 @@ text-wrap: nowrap;
     .music-player-volume-container {
         margin-top: 30px;
     }
-     /* NavBar */
+    /* NavBar */
 
     .navBar-title {
         font-size: 18px;
@@ -176,11 +179,10 @@ text-wrap: nowrap;
     } */
 
     .navBar-title-allSongs,
-    .navBar-title-playlist{
+    .navBar-title-playlist {
         font-size: 16px;
         padding: 2px;
     }
-
 
     /* ALLSONG  */
     .allSongWrapper {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GoDotFill } from "react-icons/go";
+import { toast } from "react-toastify";
 import {
     addSongToPlaylist,
     createPlayList,
@@ -23,6 +24,14 @@ const PlayListlist = () => {
         if (!inputVal) return;
         dispatch(createPlayList(inputVal));
 
+        toast.success("Playlist Created Successfully!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            theme: "dark",
+        });
         setInputVal("");
     };
 
@@ -35,6 +44,15 @@ const PlayListlist = () => {
 
     const handleDeletePLayList = () => {
         dispatch(deletePlaylist(selectedPlaylistId));
+
+        toast.error("Playlist Deleted Successfully!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            theme: "dark",
+        });
     };
 
     const handleRemoveFromPlayList = (e, song) => {
@@ -44,6 +62,17 @@ const PlayListlist = () => {
                 songId: song.id,
             }),
         );
+
+        console.log(song);
+
+        toast.error(`${song.title} Removed From ${e.name}`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            theme: "dark",
+        });
     };
 
     const handleAddToPlayList = (song) => {
@@ -53,11 +82,20 @@ const PlayListlist = () => {
                 song,
             }),
         );
+        console.log(song)
+        toast.success(`${song.title} Added`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            theme: "dark",
+        });
     };
 
     const filteredPlayLists = playLists.filter((playlist) =>
-    playlist.name.toLowerCase().includes(searchQuery.toLowerCase())
-);
+        playlist.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
 
     return (
         <>
@@ -104,7 +142,7 @@ const PlayListlist = () => {
                     </div>
                 </div>
 
-                <div className="w-90% bg-[#363636] mt-5 py-3 px-4 rounded-lg">
+                <div className="[w-90%] bg-[#363636] mt-5 py-3 px-4 rounded-lg">
                     <div className="flex justify-between items-center">
                         <h2 className=" font-semibold text-2xl ">
                             Your PlayList
